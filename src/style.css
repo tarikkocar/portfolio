@@ -1,0 +1,132 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    /* background-color: #2e334a; */
+    background-color: #383c55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    color: #dfe8eb;
+}
+
+.content {
+    max-width: 75rem;
+    display: flex;
+    gap: 2em;
+    margin: 6em 8em;
+}
+
+header {
+    width: 50%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    width: 50%;
+    margin-left: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+main h2 {
+    color: #00bfaa;
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 0;
+    margin-top: 3em;
+}
+
+a {
+    text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+    text-underline-offset: 0.3em;
+    font-size: 1.2em;
+    color: #dfe8eb;
+    transition: text-decoration 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #00bfaa;
+    text-decoration: underline 0.15em #00bfaa;
+}
+
+a.active {
+    color: #dfe8eb;
+    color: #00bfaa;
+    text-decoration: underline 0.15em #00bfaa;
+}
+
+li {
+    max-width: fit-content;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+        margin: 3em 4em;
+    }
+
+    header {
+        width: 100%;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    main {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    nav {
+        display: none;
+    }
+}
