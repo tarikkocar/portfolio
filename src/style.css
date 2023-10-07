@@ -54,7 +54,7 @@ main {
 }
 
 p {
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
 
 h1 {
@@ -70,7 +70,7 @@ main h2 {
     font-size: 1.5rem;
 }
 
-ul {
+.nav-items {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -82,9 +82,9 @@ ul {
 a {
     text-decoration: underline 0.15em rgba(255, 255, 255, 0);
     text-underline-offset: 0.3em;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: #dfe8eb;
-    transition: text-decoration 0.3s ease-in-out;
+    transition: text-decoration 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 a:hover {
@@ -102,10 +102,32 @@ li {
     max-width: fit-content;
 }
 
+.logos {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+svg {
+    filter: invert(86%) sepia(14%) saturate(100%) hue-rotate(141deg) brightness(111%) contrast(85%);
+    transition: filter 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+svg:hover {
+    filter: invert(49%) sepia(87%) saturate(1840%) hue-rotate(137deg) brightness(98%) contrast(102%);
+    transform: scale(1.1);
+}
+
 .section {
     display: flex;
     flex-direction: column;
     gap: 2em;
+}
+
+.project {
+    min-height: 10em;
 }
 
 @media (max-width: 900px) {
@@ -124,6 +146,7 @@ li {
     main {
         width: 100%;
         margin-left: 0;
+        margin-top: 1em;
     }
 
     nav {
