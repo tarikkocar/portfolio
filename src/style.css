@@ -79,7 +79,7 @@ main h2 {
     margin-top: 3em;
 }
 
-a {
+.nav-items a {
     text-decoration: underline 0.15em rgba(255, 255, 255, 0);
     text-underline-offset: 0.3em;
     font-size: 1.2rem;
@@ -127,7 +127,45 @@ svg:hover {
 }
 
 .project {
-    min-height: 10em;
+    border-radius: .25rem;
+    transition: background-color 0.3s ease-in-out;
+    padding: 1.2em;
+    transform: translateX(-1.2em);
+}
+
+.project:hover {
+    background-color: #555970;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-details {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 1em 0;
+}
+
+.project img {
+    width: auto;
+    height: 8em;
+    border-radius: .25rem;
+}
+
+.project p {
+    font-size: 1rem;
+}
+
+.project a {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    text-decoration: none;
+    width: fit-content;
 }
 
 @media (max-width: 900px) {
