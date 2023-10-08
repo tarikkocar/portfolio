@@ -191,3 +191,13 @@ svg:hover {
         display: none;
     }
 }
+
+@media (max-width: 1200px) {
+    .project-details {
+        flex-direction: column;
+    }
+
+    .project-details * {
+        align-self: flex-start;
+    }
+}
